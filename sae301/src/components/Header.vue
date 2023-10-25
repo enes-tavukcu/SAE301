@@ -1,6 +1,82 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+
+
+
+// Import éléments de vue
+import { ref, onMounted } from 'vue';
+  // Import éléments de routage
+  import { useRouter } from 'vue-router';
+  const router = useRouter()
+
+  // Import pocketbase
+  import PocketBase from 'pocketbase'
+  // Objet pocketBase
+  const pb = new PocketBase("http://127.0.0.1:8090");
+
+  
+  // user connecté ? au départ faux
+  let isConnected = ref(false)
+
+  // Element de connexion
+  let user = ref('')
+  let psw = ref('')
+
+  // User connecté
+  let currentUser = ref(null)
+  let avatar = ref(null)
+
+// Au montage du composant
+onMounted(async() => {
+  // Vérifier que le user est déjà connecté
+  refresh()
+
+})
+
+
+
+const refresh = ()=>{
+  if(pb.authStore.isValid){
+    currentUser.value = pb.authStore.model
+    isConnected.value = true
+
+    avatar.value =
+      "http://127.0.0.1:8090/api/files/"  // Adresse serveur et repertoire des fichiers image
+      +currentUser.value.collectionId     // Id ou name de la collection concernée
+      +"/"
+      +currentUser.value.id               // Id de l'utilisateur connecté
+      +"/"
+      +currentUser.value.avatar           // Nom fichier image pocketbase
+      +"?thumb=100x100"                   // Taille par défaut     
+
+//      console.log("image avatar utilisateur", avatar)
+  }
+}
+
+const connect = async()=>{
+  try{
+    const authData = await pb.collection('users')
+    .authWithPassword(user.value, psw.value)
+//    console.log("connecté : ",authData)
+    refresh()    
+  }catch(error){
+//    console.log("erreur de connexion : ",error.message)
+    alert("Erreur d'identification : mauvais login et/ou mot de passe")
+    user.value = ""
+    psw.value = ""
+  }
+}
+
+const deconnect = ()=>{
+  // Suppression utilisateur connecté
+  pb.authStore.clear()
+  isConnected.value=false
+  avatar.value = null
+  // Retour à la page d'accueil -> Redirection
+  router.push({name:"HomeView"})
+}
 </script>
+
 
 <template>
      <header>
@@ -8,14 +84,62 @@ import { RouterLink } from 'vue-router'
     <nav>
       <RouterLink to="/" button class="nav-btn">Accueil</RouterLink>
       <button class="nav-btn">Personnaliser</button>
-      <button class="nav-btn">Mon compte</button>
+      
     </nav>
-    <RouterLink to="/Connexion" button class="signup-btn">S'inscrire</RouterLink>
+    <RouterLink to="/about" button class="signup-btn">S'inscrire</RouterLink>
+
+
+    <div class="ml-auto1">              
+              <span v-if="isConnected"> 
+                <img :src="avatar" class="img-fluid" style="max-width:60px;" />
+                <button class="btn btn-light mr-2 bouton_">
+                  {{ currentUser.username }}
+                </button>              
+                <button class="btn btn-dark ml-auto2"
+                 type="button" @click="deconnect"><p>DECONNEXION</p>
+                    <i class="fa fa-sign-out"></i>
+                  </button>
+              </span>
+
+              <form v-else class="form-inline  input-group-sm ml-auto3" >
+                  <input class="form-control mr-2" placeholder="Login" v-model="user">
+                  <input class="form-control mr-2" placeholder="Password" v-model="psw">
+                  <button class="btn btn-dark ml-auto4" 
+                      type="button" @click.prevent="connect"><p>Connexion</p>
+                      <i class="fa fa-power-off"></i>
+                  </button>
+                </form>
+              </div>
   </header>
     <RouterView />
+
+    
   </template>
   
   <style scoped>
+  .bouton_{
+    border-radius: 25px;
+    border-style: none;
+    background-color: #ffffff;
+  }
+  .ml-auto2{
+    width: 120px;
+    height: 40px;
+  }
+  .form-control{
+    width: 100px;
+  }
+  .ml-auto1{
+    height: 70px;
+    width: 250px; /* Largeur de la div */
+  padding: 20px; /* Espace intérieur autour des éléments */
+  background-color: #ffffff; 
+  border-radius: 50px; /* Coins arrondis */
+
+  }
+
+
+
   header {
   background-color: #D9D9D9;
   height: 86px;
@@ -29,7 +153,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .logo {
-  margin-left: 113px;
+  
   color: #000;
   font-family: 'Montserrat', sans-serif;
   font-size: 40px;
@@ -41,7 +165,8 @@ import { RouterLink } from 'vue-router'
 
 nav {
   display: flex;
-  gap: 102px;
+  gap: 50px;
+  margin-left: 400px;
 }
 
 .nav-btn {

@@ -51,7 +51,7 @@ TaVue, des Lunettes qui vous ressemblent.
     </div>
 
     <div style="text-align: center;">
-      <button class="Personnalisation-btn">Personnaliser votre lunette</button>
+      <RouterLink to="/personnalisation" button class="Personnalisation-btn">Personnaliser votre lunette</RouterLink>
     </div>
 
     <div class="newsletter-container">
@@ -82,26 +82,27 @@ TaVue, des Lunettes qui vous ressemblent.
   background-color: #000;
   color: #ffffff;
   border: none;
-  
-  padding: 0.5rem 1rem;
+  height: 30px;
+  padding: 0.5rem;
   cursor: pointer;
   width: 200px;
+  height: 45px;
 }
 .newsletter-input {
   flex: 1;
   padding: 0.5rem;
   
   border: none;
-  
+  height: 30px;
   width: 400px;
 
 background: #D9D9D9;
 }
-.newsltetter-form{
+.newsletter-form{
   display: flex;
   align-items: center;
   background-color: #CCC;
-  padding: 1rem;
+  
   
 }
 .newsletter-title{
@@ -114,6 +115,7 @@ background: #D9D9D9;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 40px;
 }
 
 .textmap{

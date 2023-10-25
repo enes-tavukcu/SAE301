@@ -19,6 +19,16 @@ const router = createRouter({
       path: '/connexion',
       name: 'connexion',
       component: () => import('../views/ConnexionView.vue') // Assurez-vous d'avoir un fichier ConnexionView.vue dans votre répertoire views.
+    },
+    {
+      path: '/personnalisation',
+      name: 'personnalisation',
+      component: () => import('../views/PersonnalisationView.vue') // Assurez-vous d'avoir un fichier ConnexionView.vue dans votre répertoire views.
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('../views/AboutView.vue') // Assurez-vous d'avoir un fichier ConnexionView.vue dans votre répertoire views.
     }
   ]
 })
