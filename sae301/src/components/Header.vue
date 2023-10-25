@@ -86,7 +86,7 @@ const deconnect = ()=>{
       <button class="nav-btn">Personnaliser</button>
       
     </nav>
-    <RouterLink to="/about" button class="signup-btn">S'inscrire</RouterLink>
+    <RouterLink to="/Connexion" button class="signup-btn">S'inscrire</RouterLink>
 
 
     <div class="ml-auto1">              
