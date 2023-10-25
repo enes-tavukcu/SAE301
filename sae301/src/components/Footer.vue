@@ -1,3 +1,9 @@
+<script setup>
+import IconFacebook from '../components/icons/IconFacebook.vue'
+import IconInstagram from '../components/icons/IconInsta.vue'
+import IconTwitter from '../components/icons/IconTwitter.vue'
+import IconYoutube from '../components/icons/IconYoutube.vue'
+</script>
 <template>
     <footer style="background-color: #EFEFEF; width: auto; height: 437px; display: flex; flex-direction: column; align-items: center; padding-top: 20px;">
       
@@ -28,10 +34,10 @@
         <div class="section">
           <h3>Nous suivre sur les réseaux</h3>
           <ul class="social-icons">
-            <li><img src="path-to-image1.png" alt="Icon 1" width="28px"></li>
-            <li><img src="path-to-image2.png" alt="Icon 2" width="28px"></li>
-            <li><img src="path-to-image3.png" alt="Icon 3" width="28px"></li>
-            <li><img src="path-to-image4.png" alt="Icon 4" width="28px"></li>
+            <li><IconInstagram/></li>
+            <li><IconFacebook/></li>
+            <li><IconTwitter/></li>
+            <li><IconYoutube/></li>
           </ul>
         </div>
       </div>

@@ -17,7 +17,9 @@ TaVue, des Lunettes qui vous ressemblent.
              à prix fort et leur personnalisation exclusive.
           </p>
           <p class="subtitle"> LUNETTE RAZER TAVUE</p>
+          <div class="decouvrir" style="text-align: center;">
           <button class="decouvrir-btn">Découvrir</button>
+          </div>
         </div>
       </div>  
     </div>
