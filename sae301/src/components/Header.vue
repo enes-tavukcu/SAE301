@@ -86,7 +86,7 @@ const deconnect = ()=>{
 
 <template>
      <header>
-    <div class="logo">Tavue</div>
+    <div class="logo">TaVue</div>
     <nav>
       <RouterLink style="text-decoration: none;" to="/" button class="nav-btn">Accueil</RouterLink>
       <RouterLink style="text-decoration: none;" to="/personnalisation" button class="nav-btn">Personnaliser</RouterLink>
@@ -206,7 +206,7 @@ const deconnect = ()=>{
   
   font-weight: 600;
   line-height: 54px;
-  text-transform: uppercase;
+  
 }
 
 nav {
