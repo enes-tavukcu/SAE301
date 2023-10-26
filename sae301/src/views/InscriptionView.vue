@@ -3,9 +3,9 @@ import PocketBase from 'pocketbase'
 var connected = false;
 var pocketbase_ip = "";
 if (import.meta.env.MODE === "production")
-    pocketbase_ip = "http://tavue.enestavukcu.fr:8090";
-else pocketbase_ip = "http://127.0.0.1:8090";
-const pb = new PocketBase(pocketbase_ip);
+  pocketbase_ip = "http://193.168.146.79/";
+else pocketbase_ip = "http://127.0.0.1:8090/";
+  const pb = new PocketBase(pocketbase_ip);
 var currentUser;
 export default {
     methods: {
