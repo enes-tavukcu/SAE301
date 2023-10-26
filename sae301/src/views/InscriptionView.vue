@@ -86,7 +86,7 @@ export default {
                     <input type="password" required id="passwd" placeholder="Mot de passe" style="margin-bottom: 20px;"/><br />
                     <div class="btn_connect">
                     <RouterLink style="text-decoration: none;" to="/" button v-on:click="register()" class="inscrire">S'inscrire</RouterLink>
-                    <button v-on:click="loginGithub()" class="git">Se connecter avec Github</button>
+                    <button v-on:click="githublogin()" class="git">Se connecter avec Github</button>
                     </div>
                     <p><label id="status"> Vous n'etes pas connectez </label><br /></p>
                 </div>
