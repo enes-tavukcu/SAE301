@@ -12,7 +12,7 @@ TaVue, des Lunettes qui vous ressemblent.
 
     <div class="container">
       <div class="left">
-        <img class="img_accueil" src="/src/assets/Image-accueil-lunette.webp" alt="img_accueil">
+        <img style="margin-left: 300px;" src="/src/assets/Image-accueil-lunette.webp" alt="img_accueil">
       </div>  
       <div class="right">
         <div class="text">
