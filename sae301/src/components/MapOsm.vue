@@ -39,8 +39,8 @@
 
         // Création d'un icone
         let myIcon = Leaflet.icon({
-            iconUrl:    '/marker-icon-2x.png',       // Image de l'icone
-            shadowUrl:  '/marker-shadow.png',     // Ombre de l'icone
+            iconUrl:    'images/marker-icon-2x.png',       // Image de l'icone
+            shadowUrl:  'images/marker-shadow.png',     // Ombre de l'icone
             iconSize:   [25, 41],                       // Taille de l'icone
             shadowSize: [25, 41],                       // Taille de l'ombre de l'icone
             iconAnchor: [-10,-10],                      // Ancrage de l'icone
@@ -53,6 +53,7 @@
 
         // Ajouter une popup / infobulle
         marker.bindPopup('Ma position')
+        marker2.bindPopup('Ma position')
         
 
         // Recentrage de la carte au bout de 5 secondes
@@ -65,6 +66,8 @@
 
         // ajout nouveau marker
         let marker = Leaflet.marker([47.495328, 6.8044455], {icon: myIcon}).addTo(map)
+        let marker2 = Leaflet.marker([46, 5], {icon: myIcon}).addTo(map)
+
        
 
         

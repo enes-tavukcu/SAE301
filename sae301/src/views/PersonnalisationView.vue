@@ -3,7 +3,7 @@ import { ref } from 'vue';
 import PocketBase from 'pocketbase';
 var pocketbase_ip = "";
 if (import.meta.env.MODE === "production")
-    pocketbase_ip = "http://tavue.enestavukcu.fr:8090"; 
+    pocketbase_ip = "http://193.168.146.79/"; 
 else pocketbase_ip = "http://127.0.0.1:8090";
 const pb = new PocketBase(pocketbase_ip);
 
@@ -186,7 +186,7 @@ const branchColors = {
         <div style="margin-left: 200px; ">
         
             
-            <p style="font-size: x-large;">Prix : 300 €</p>
+            <p style="font-size: x-large; font-weight: 700;">Prix : 300 €</p>
             
         <div style="display: flex;">
         <p style="width: 200px;">Couleur du cadre:</p>
@@ -223,12 +223,88 @@ const branchColors = {
                 Commander
             </button>
     </div>
+
+    <div class="description">
+        <h3 style="text-align: center;">Description</h3>
+        <p style="margin-bottom: 50px;">Découvrez l'élégance inégalée alliée à une vision exceptionnelle avec
+            notre paire de lunettes premium TaVue.
+            Conçue pour les esprits sophistiqués, cette monture incarne la
+            fusion parfaite du style et de la qualité.
+            Fabriquée avec un souci méticuleux du détail, la monture TaVue présente un
+            design intemporel qui convient à tous les visages. Le choix du matériau offre
+            à la fois légèreté et robustesse pour un confort durable.</p>
+    </div>
+
+    <div class="newsletter-container">
+      <h2 class="newsletter-title">S'INSCRIRE à LA NEWSLETTER</h2>
+      <div class="newsletter-form">
+        <input type="text3" placeholder="Entrez votre adresse e-mail" class="newsletter-input">
+        <button class="newsletter-button">S'INSCRIRE</button>
+      </div>
+    </div>
+
     </main>
   </template>
   
   
   
   <style scoped>
+  .newsletter-button:active {
+  background-color: #474747;
+  color: #ffffff;
+}
+
+.newsletter-button:hover{
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid var(--noir, #000);
+}
+
+.newsletter-button{
+  background-color: #000;
+  color: #ffffff;
+  border: none;
+  height: 30px;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 200px;
+  height: 45px;
+}
+.newsletter-input {
+  flex: 1;
+  padding: 0.5rem;
+  
+  border: none;
+  height: 30px;
+  width: 400px;
+
+background: #D9D9D9;
+}
+.newsletter-form{
+  display: flex;
+  align-items: center;
+  background-color: #CCC;
+  
+  
+}
+.newsletter-title{
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+.newsletter-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+  .description{
+  margin: auto;
+  width: 960px;
+  font-size: 18px;
+  }
   .btn{
     display: flex;
     justify-content: center;

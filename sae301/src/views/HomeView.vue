@@ -51,7 +51,7 @@ TaVue, des Lunettes qui vous ressemblent.
     </div>
 
     <div class="textmap">
-      Nos locaux français
+      Trouver un opticien près de chez vous
     </div>
 
   

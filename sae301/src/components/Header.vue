@@ -108,8 +108,8 @@ const deconnect = ()=>{
               </span>
 
               <form v-else class="form-inline  input-group-sm ml-auto3" >
-                  <input class="form-control mr-2" placeholder="Login" v-model="user">
-                  <input class="form-control mr-2" placeholder="Password" v-model="psw">
+                  <input class="barre" placeholder="Login" v-model="user">
+                  <input class="barre" placeholder="Password" v-model="psw">
                   
                   <button class="btn btn-dark ml-auto4" 
                       type="button" @click.prevent="connect"><p>Connexion</p>
@@ -124,6 +124,13 @@ const deconnect = ()=>{
   </template>
   
   <style scoped>
+    .barre{
+  width: 100px;
+    padding: 10px;
+    background-color: rgb(202, 202, 202);
+    border: none;
+    border-radius: 10px;
+}
 
   .bouton_{
     border-radius: 25px;
@@ -145,6 +152,8 @@ const deconnect = ()=>{
     .ml-auto4:hover{
         background-color: #000000;
         color: white;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
     }
   .ml-auto2{
     width: 120px;
@@ -211,7 +220,7 @@ nav {
   border: none;
   color: #000;
   font-family: 'PT Sans', sans-serif;
-  font-size: 17px;
+  font-size: 22px;
   font-weight: 400;
   line-height: 20.4px;
   cursor: pointer;
@@ -221,6 +230,8 @@ nav {
 
 .nav-btn:hover {
   color: #56585c;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 .signup-btn {
@@ -241,6 +252,8 @@ nav {
 .signup-btn:hover {
     background-color: #000000;
     color: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 
 

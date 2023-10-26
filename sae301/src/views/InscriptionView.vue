@@ -76,14 +76,15 @@ export default {
                     </div>
                     <label>Utilisateur : </label><br />
                     <br />
-                    <input type="name" required id="name" placeholder="Nom d'utilisateur" /><br />
+                    <input class="barre" type="name" required id="name" placeholder="Nom d'utilisateur" /><br />
                     <br />
                     <label>Adresse mail : </label><br />
-                    <input type="email" required id="email" placeholder="Entrez votre adresse" /><br />
+                    <br />
+                    <input class="barre" type="email" required id="email" placeholder="Entrez votre adresse" /><br />
                     <br />
                     <label>Mot de passe: </label><br />
                     <br />
-                    <input type="password" required id="passwd" placeholder="Mot de passe" style="margin-bottom: 20px;"/><br />
+                    <input class="barre" type="password" required id="passwd" placeholder="Mot de passe" style="margin-bottom: 20px;"/><br />
                     <div class="btn_connect">
                     <RouterLink style="text-decoration: none;" to="/" button v-on:click="register()" class="inscrire">S'inscrire</RouterLink>
                     <button v-on:click="githublogin()" class="git">Se connecter avec Github</button>
@@ -97,6 +98,21 @@ export default {
 
 
 <style scoped>
+
+.btn_connect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.barre{
+    width: 300px;
+    padding: 10px;
+    background-color: rgb(202, 202, 202);
+    border: none;
+    border-radius: 10px;
+
+}
 .git{
     background-color: #000;
     color: #ffffff;
@@ -104,34 +120,36 @@ export default {
     height: 30px;
     padding: 0.5rem;
     cursor: pointer;
-    width: 200px;
-    height: 45px;
+    width: 250px;
+    height: 35px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
+    font-size: 18x;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .git:hover{
     background-color: #ffffff;
     color: #000;
-    border: 1px solid var(--noir, #000);
+    border: 0px solid var(--noir, #000);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .inscrire{
     background-color: #000;
     color: #ffffff;
     border: none;
-    height: 30px;
+    height: 15px;
     padding: 0.5rem;
     cursor: pointer;
-    width: 200px;
-    height: 45px;
+    width: 100px;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
 }
 .inscrire:hover{
     background-color: #ffffff;
     color: #000;
-    border: 1px solid var(--noir, #000);
+    border: 0px solid var(--noir, #000);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));    
 }
 .card{
   text-align: center;
