@@ -82,14 +82,14 @@ export default {
                     <br />
                     <input class="barre" type="email" required id="email" placeholder="Entrez votre adresse" /><br />
                     <br />
-                    <label>Mot de passe: </label><br />
+                    <label>Mot de passe : </label><br />
                     <br />
                     <input class="barre" type="password" required id="passwd" placeholder="Mot de passe" style="margin-bottom: 20px;"/><br />
                     <div class="btn_connect">
                     <RouterLink style="text-decoration: none;" to="/" button v-on:click="register()" class="inscrire">S'inscrire</RouterLink>
                     <button v-on:click="githublogin()" class="git">Se connecter avec Github</button>
                     </div>
-                    <p><label id="status"> Vous n'etes pas connectez </label><br /></p>
+                    
                 </div>
             </div>
         </div>
@@ -130,7 +130,8 @@ export default {
 .git:hover{
     background-color: #ffffff;
     color: #000;
-    border: 1px solid var(--noir, #000);
+    border: 0px solid var(--noir, #000);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .inscrire{
