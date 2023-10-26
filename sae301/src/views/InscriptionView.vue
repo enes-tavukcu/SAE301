@@ -130,8 +130,7 @@ export default {
 .git:hover{
     background-color: #ffffff;
     color: #000;
-    border: 0px solid var(--noir, #000);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid var(--noir, #000);
 }
 
 .inscrire{

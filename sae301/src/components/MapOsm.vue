@@ -49,13 +49,9 @@
         })
 
         
-        
-
+        let marker = Leaflet.marker([47.495328, 6.8044455], {icon: myIcon}).addTo(map)
         // Ajouter une popup / infobulle
-        marker.bindPopup('Ma position')
-        marker2.bindPopup('Ma position')
-        
-
+        marker.bindPopup('Département MMI - Portes du Jura - 25200 Montbéliard')
         // Recentrage de la carte au bout de 5 secondes
         // à une autre position
         setTimeout(
@@ -64,19 +60,31 @@
             }, 5000
         )
 
+
         // ajout nouveau marker
-        let marker = Leaflet.marker([47.495328, 6.8044455], {icon: myIcon}).addTo(map)
-        let marker2 = Leaflet.marker([46, 5], {icon: myIcon}).addTo(map)
-
-       
-
         
-
-
+        let marker2 = Leaflet.marker([47.49743743022477, 6.820453397194113], {icon: myIcon}).addTo(map)
         // Ajouter une popup / infobulle
-        
+        marker2.bindPopup('Optic2000 <br/> Maison de Santé - Citevie, 58 Rue Jacques Foillet, 25200 Montbéliard')
 
+        let marker3 = Leaflet.marker([47.512850804922714, 6.798778071875896], {icon: myIcon}).addTo(map)
+        // Ajouter une popup / infobulle
+        marker3.bindPopup('Optical Center <br/> 41 Av. des Alliés, 25200 Montbéliard')
 
+        let marker4 = Leaflet.marker([47.509796599403266, 6.799387559678173], {icon: myIcon}).addTo(map)
+        // Ajouter une popup / infobulle
+        marker4.bindPopup('Krys <br/> 44 Rue Cuvier, 25200 Montbéliard')
+    
+    
+        let marker5 = Leaflet.marker([47.500283713114854, 6.810062315972849], {icon: myIcon}).addTo(map)
+        // Ajouter une popup / infobulle
+        marker5.bindPopup('Atol Montbéliard <br/> Zac Du Pied Des Gouttes, Rue Jacques Foillet C.Cial E.Leclerc, 25200 Montbéliard')
+    
+        let marker6 = Leaflet.marker([47.509418430994735, 6.797028861970782], {icon: myIcon}).addTo(map)
+        // Ajouter une popup / infobulle
+        marker6.bindPopup('ACUITIS Opticien & Audioprothésiste Montbéliard <br/> 28 Rue des Febvres, 25200 Montbéliard')
+    
+    
     }) // Fin onMounted
 
     // Fonction de détection de la géolocalisation via le navigateur

@@ -108,8 +108,8 @@ const deconnect = ()=>{
               </span>
 
               <form v-else class="form-inline  input-group-sm ml-auto3" >
-                  <input class="barre" placeholder="Login" v-model="user">
-                  <input class="barre" placeholder="Password" v-model="psw">
+                  <input class="barre" placeholder="Adresse email" v-model="user">
+                  <input class="barre" placeholder="Mot de pass" type="password" v-model="psw">
                   
                   <button class="btn btn-dark ml-auto4" 
                       type="button" @click.prevent="connect"><p>Connexion</p>
