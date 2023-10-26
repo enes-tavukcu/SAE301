@@ -230,7 +230,7 @@ display: flex;
     }
   .tit{
     font-size: 34px;
-    width: 620px;
+    width: 720px;
     text-align: center;
     margin: auto;
     margin-top: 36px;
