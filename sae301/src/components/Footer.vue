@@ -5,7 +5,12 @@ import IconTwitter from '../components/icons/IconTwitter.vue'
 import IconYoutube from '../components/icons/IconYoutube.vue'
 </script>
 <template>
-    <footer style="background-color: #EFEFEF; width: auto; height: 437px; display: flex; flex-direction: column; align-items: center; padding-top: 20px;">
+    <footer style="background-color: #EFEFEF; width: auto;
+     height: 437px; display: flex; flex-direction: column;
+      align-items: center; padding-top: 20px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular',
+       'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+        Verdana, sans-serif">
       
       <!-- Première ligne -->
       <div style="width: 1066.667px; height: var(--min-count, 2px); border-radius: var(--min-count, 0px); background: #685F5F;"></div>
@@ -56,7 +61,7 @@ import IconYoutube from '../components/icons/IconYoutube.vue'
   </template>
   
   <style scoped>
-  .section h3, .section ul li, span {
+  .section .section ul li, span {
     color: var(--noir, #000);
     text-align: center;
     font-family: 'Jacques Francois', sans-serif;
@@ -83,5 +88,10 @@ import IconYoutube from '../components/icons/IconYoutube.vue'
   
   span {
     color: #685F5F;
+  }
+
+  h3{
+    font-style: italic;
+    font-weight: bold;
   }
   </style>

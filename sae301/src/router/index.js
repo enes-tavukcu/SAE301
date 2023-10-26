@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ConnexionView from '../views/ConnexionView.vue'
+import InscriptionView from '../views/InscriptionView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,9 +16,9 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/connexion',
-      name: 'connexion',
-      component: () => import('../views/ConnexionView.vue') // Assurez-vous d'avoir un fichier ConnexionView.vue dans votre répertoire views.
+      path: '/inscription',
+      name: 'inscription',
+      component: () => import('../views/InscriptionView.vue') // Assurez-vous d'avoir un fichier ConnexionView.vue dans votre répertoire views.
     },
     {
       path: '/personnalisation',

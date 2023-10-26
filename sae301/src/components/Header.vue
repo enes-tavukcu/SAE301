@@ -12,7 +12,9 @@ import { ref, onMounted } from 'vue';
   // Import pocketbase
   import PocketBase from 'pocketbase'
   // Objet pocketBase
+  
   const pb = new PocketBase("http://127.0.0.1:8090");
+  
 
   
   // user connecté ? au départ faux
@@ -82,18 +84,18 @@ const deconnect = ()=>{
      <header>
     <div class="logo">Tavue</div>
     <nav>
-      <RouterLink to="/" button class="nav-btn">Accueil</RouterLink>
-      <button class="nav-btn">Personnaliser</button>
+      <RouterLink style="text-decoration: none;" to="/" button class="nav-btn">Accueil</RouterLink>
+      <RouterLink style="text-decoration: none;" to="/personnalisation" button class="nav-btn">Personnaliser</RouterLink>
       
     </nav>
-    <RouterLink to="/Connexion" button class="signup-btn">S'inscrire</RouterLink>
+    <RouterLink style="text-decoration: none;" to="/inscription" button class="signup-btn">S'inscrire</RouterLink>
 
 
     <div class="ml-auto1">              
               <span v-if="isConnected"> 
-                <img :src="avatar" class="img-fluid" style="max-width:60px;" />
+                
                 <button class="btn btn-light mr-2 bouton_">
-                  {{ currentUser.username }}
+                  {{ currentUser.name }}
                 </button>              
                 <button class="btn btn-dark ml-auto2"
                  type="button" @click="deconnect"><p>DECONNEXION</p>
@@ -104,6 +106,7 @@ const deconnect = ()=>{
               <form v-else class="form-inline  input-group-sm ml-auto3" >
                   <input class="form-control mr-2" placeholder="Login" v-model="user">
                   <input class="form-control mr-2" placeholder="Password" v-model="psw">
+                  
                   <button class="btn btn-dark ml-auto4" 
                       type="button" @click.prevent="connect"><p>Connexion</p>
                       <i class="fa fa-power-off"></i>
@@ -117,14 +120,43 @@ const deconnect = ()=>{
   </template>
   
   <style scoped>
+
   .bouton_{
     border-radius: 25px;
     border-style: none;
     background-color: #ffffff;
   }
+  .ml-auto4{
+    width: 120px;
+    height: 5vh;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #908e8e;
+    transition: background-color 0.3s ease;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+  }
+    .ml-auto4:hover{
+        background-color: #000000;
+        color: white;
+    }
   .ml-auto2{
     width: 120px;
     height: 40px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #908e8e;
+    transition: background-color 0.3s ease;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+  }
+  .ml-auto2:hover{
+      background-color: #000000;
+      color: white;
   }
   .form-control{
     width: 100px;
@@ -148,6 +180,7 @@ const deconnect = ()=>{
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  
   
   
 }
@@ -178,6 +211,12 @@ nav {
   font-weight: 400;
   line-height: 20.4px;
   cursor: pointer;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+
+.nav-btn:hover {
+  color: #56585c;
 }
 
 .signup-btn {
@@ -187,13 +226,18 @@ nav {
   width: 86px;
   color: white;
   font-family: 'PT Sans', sans-serif;
-  line-height: 20.4px;
-  padding: inherit;
-  padding-left: 40px;
-  
+  transition: background-color 0.3s ease;
+    padding: 16px 20px;
+    padding-left: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+
 }
 
-.RouterLink{
-    list-style: none;
+.signup-btn:hover {
+    background-color: #000000;
+    color: white;
 }
+
+
   </style>

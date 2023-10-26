@@ -1,3 +1,7 @@
+<script setup>
+import MapOsm from '../components/MapOsm.vue';
+</script>
+
 <template>
   <main>
 
@@ -18,7 +22,7 @@ TaVue, des Lunettes qui vous ressemblent.
           </p>
           <p class="subtitle"> LUNETTE RAZER TAVUE</p>
           <div class="decouvrir" style="text-align: center;">
-          <button class="decouvrir-btn">Découvrir</button>
+          <RouterLink to="/personnalisation" button class="decouvrir-btn">Découvrir</RouterLink>
           </div>
         </div>
       </div>  
@@ -50,6 +54,11 @@ TaVue, des Lunettes qui vous ressemblent.
       Nos locaux français
     </div>
 
+  
+    <MapOsm/>
+   
+
+    
     <div style="text-align: center;">
       <RouterLink to="/personnalisation" button class="Personnalisation-btn">Personnaliser votre lunette</RouterLink>
     </div>
@@ -226,5 +235,11 @@ display: flex;
     margin: auto;
     margin-top: 36px;
     margin-bottom: 38px;
+  }
+  .tit, .title, .subtitle, .decouvrir-btn, .newsletter-button,
+   .Personnalisation-btn, .newsletter-form, .newsletter-input,
+    .newsletter-title, .textmap, .text2, .sous-rect{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
   }
 </style>
