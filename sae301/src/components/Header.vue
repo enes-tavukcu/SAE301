@@ -201,12 +201,13 @@ const deconnect = ()=>{
 .logo {
   
   color: #000;
-  font-family: 'Montserrat', sans-serif;
+  
   font-size: 40px;
   
   font-weight: 600;
   line-height: 54px;
-  
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
 }
 
 nav {
