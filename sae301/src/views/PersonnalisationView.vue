@@ -2,10 +2,13 @@
 import { ref } from 'vue';
 import PocketBase from 'pocketbase';
 var pocketbase_ip = "";
-if (import.meta.env.MODE === "production")
-    pocketbase_ip = "http://193.168.146.79/"; 
-else pocketbase_ip = "http://127.0.0.1:8090";
-const pb = new PocketBase(pocketbase_ip);
+
+// if (import.meta.env.MODE === "production")
+//   pocketbase_ip = "http://193.168.146.79/";
+// else pocketbase_ip = "http://127.0.0.1:8090/";
+//   const pb = new PocketBase(pocketbase_ip);
+
+const pb = new PocketBase(import.meta.env.VITE_POCKETBASE_IP);
 
 const cadre_couleur = ref('#B2B2B2');
 const verre_couleur = ref('#1D1D1B');

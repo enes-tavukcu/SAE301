@@ -1,0 +1,29 @@
+﻿Enes TAVUKCU                                                                        MMI2 B1
+
+
+SAE301
+
+
+
+
+Pour se connecter au pocketbase local ou distribuable voici l’user et le mot de passe : 
+
+
+User : enestavukcu2525@gmail.com        
+
+
+Mot de passe : SAE_301.2023
+
+
+Lien du site :         http://tavue.enestavukcu.fr
+ http://193.168.146.79/      (adresse vps)
+
+
+Pour se connecter sur le site voici un compte provenant de la collection users:
+
+
+Adresse mail : userprof@gmail.com
+Mot de passe : sae301.2023
+
+
+Après si vous voulez de part votre propre expérience tester la page inscription, celle-ci est fonctionnelle et vous pourrez ensuite vous connecter en haut à droite de l’écran
